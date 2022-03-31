@@ -1,0 +1,31 @@
+class Solution(object):
+    def twoSum(self, nums, target):
+        
+        index = 0
+        
+        
+        # turn the list into a positions of each integer in the list
+        num_index= list(range(len(nums)))
+        
+        
+        # for the index and values in num_index, count each value
+        for indx,values in enumerate(num_index):
+        # placeholder value that loops though the entire list 
+            for num_nums in num_index[indx+1:]:
+                if nums[values] + nums[num_nums] == target:
+                    return (values, num_nums)
+                
+        """
+        for value in add_values:
+            target_vals.append(index)
+            index += 1
+        return target_vals
+        
+        
+                if (add_values == target):
+                    append(target_vals)
+                    print (target_vals)
+                
+        """
+          # print(index)
+          # index += 1
